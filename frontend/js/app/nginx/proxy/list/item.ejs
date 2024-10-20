@@ -44,6 +44,19 @@
         <span class="status-icon bg-warning"></span> <%- i18n('str', 'unknown') %>
     <% } %>
 </td>
+<td>
+    <%
+    var o = isOnline();
+    if (!enabled) { %>
+        <span class="status-icon bg-warning"></span> <%- i18n('str', 'disabled') %>
+    <% } else if (o === true) { %>
+        <span class="status-icon bg-success"></span> <%- i18n('str', 'online') %>
+    <% } else if (o === false) { %>
+        <span title="<%- getOfflineError() %>"><span class="status-icon bg-danger"></span> <%- i18n('str', 'offline') %></span>
+    <% } else { %>
+        <span class="status-icon bg-warning"></span> <%- i18n('str', 'unknown') %>
+    <% } %>
+</td>
 <% if (canManage) { %>
 <td class="text-right">
     <div class="item-action dropdown">
