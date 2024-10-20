@@ -48,11 +48,11 @@
     <%
     var o = isOnline();
     if (!enabled) { %>
-        <span class="status-icon bg-warning"></span> <%- i18n('str', 'disabled') %>
+        <span class="status-icon bg-warning"></span> <%- i18n('str', 'captcha off') %>
     <% } else if (o === true) { %>
-        <span class="status-icon bg-success"></span> <%- i18n('str', 'online') %>
+        <span class="status-icon bg-success"></span> <%- i18n('str', 'captcha on') %>
     <% } else if (o === false) { %>
-        <span title="<%- getOfflineError() %>"><span class="status-icon bg-danger"></span> <%- i18n('str', 'offline') %></span>
+        <span title="<%- getOfflineError() %>"><span class="status-icon bg-danger"></span> <%- i18n('str', 'captcha off') %></span>
     <% } else { %>
         <span class="status-icon bg-warning"></span> <%- i18n('str', 'unknown') %>
     <% } %>
@@ -65,7 +65,7 @@
             <span class="dropdown-header"><%- i18n('audit-log', 'proxy-host') %> #<%- id %></span>
             <a href="#" class="edit dropdown-item"><i class="dropdown-icon fe fe-edit"></i> <%- i18n('str', 'edit') %></a>
             <a href="#" class="able dropdown-item"><i class="dropdown-icon fe fe-power"></i> <%- i18n('str', enabled ? 'disable' : 'enable') %></a>
-            <a href="#" class="able dropdown-item"><i class="dropdown-icon fe fe-power"></i> <%- i18n('str', chaptch on ? 'chaptch off' : 'chaptch on') %></a>
+            <a href="#" class="able dropdown-item"><i class="dropdown-icon fe fe-power"></i> <%- i18n('str', captcha on ? 'captcha off' : 'captcha on') %></a>
             <div class="dropdown-divider"></div>
             <a href="#" class="delete dropdown-item"><i class="dropdown-icon fe fe-trash-2"></i> <%- i18n('str', 'delete') %></a>
         </div>
